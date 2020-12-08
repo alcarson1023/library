@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Library!</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="library.css" />
+  </head>
+  <body>
+    <h3>Let's sort some books!</h3>
+    <form name='form'>
+        <input type="text" id='titleInput' placeholder="Title" />
+        <input type="text" id='authorInput' placeholder="Author" />
+        <input type="text" id='pagesInput' placeholder="Pages" />
+    </form>
+    <button id='submit'>Submit</button>
+    <h3 id="message"></h3>
+    <div
+      id="page"
+    >
+      <div style="display: grid; align-items: center; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr))" id="books"></div>
+    </div>
+  </body>
+</html>
+<script type="module" src="library.js"></script>
