@@ -7,8 +7,11 @@ const pagesInput = document.querySelector("#pagesInput");
 const submit = document.querySelector("#submit");
 
 let myLibrary = [
-  { title: "Lord of the Rings", author: "J.R.R. Tolkein", pages: 344 },
-  { title: "Lord of the Flies", author: "I.D.K. Mann", pages: 123 },
+  { title: "Lord of the Rings", author: "J.R.R. Tolkein", pages: 1178 },
+  { title: "Lord of the Flies", author: "William Golding", pages: 224 },
+  { title: 'Lord of Light', author: 'Roger Zelazny', pages: 296},
+  { title: 'Lord of Time', author: 'Michele Amitrani', pages: 162},
+  { title: 'Lord of Lies', author: 'David Zindell', pages: 811},
 ];
 
 // This is the constructor
@@ -32,8 +35,10 @@ submit.addEventListener("click", function () {
       authorInput.value,
       pagesInput.value
     );
-    console.log(newBook);
     myLibrary.push(newBook);
+    titleInput.value = "";
+    authorInput.value = "";
+    pagesInput.value = "";
     showBooks();
   }
 });
